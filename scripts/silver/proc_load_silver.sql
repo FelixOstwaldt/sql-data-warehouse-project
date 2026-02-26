@@ -1,3 +1,18 @@
+/*
+=============================================================
+Truncates and Loads Tables from the bronze layer to the silver layer.
+It performs multiple transformation and cleaning steps on the data.
+=============================================================
+Script Purpose:
+    This script loads the tables from bronze layer into the silver layer, after truncating the tables, and transforming and cleaning the data.  
+	
+WARNING:
+    Running this script will drop the content of all silver layer tables and fill them with the data from the bronze layer.
+    There is no versioning or history of old data. Old data will be deleted finally.
+*/
+
+
+
 CREATE OR ALTER  PROCEDURE silver.load_silver AS
 BEGIN
 
