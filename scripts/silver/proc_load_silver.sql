@@ -77,19 +77,19 @@ BEGIN
 			cst_key,
 			cst_firstname,
 			cst_lastname,
-			cst_material_status,
+			cst_marital_status,
 			cst_gndr,
 			cst_create_date) 
-
+		
 		SELECT
 			cst_id,
 			cst_key,
 			TRIM(cst_firstname) AS cst_firstname, -- Data cleaning, removing unwanted spaces
 			TRIM(cst_lastname) AS cst_lastname,  -- Date cleaning, removing unwanted spaces
-			CASE WHEN UPPER(TRIM(cst_material_status)) = 'M' THEN 'Married'
-				 WHEN UPPER(TRIM(cst_material_status)) = 'S' THEN 'Sinlge'
+			CASE WHEN UPPER(TRIM(cst_marital_status)) = 'M' THEN 'Married'
+				 WHEN UPPER(TRIM(cst_marital_status)) = 'S' THEN 'Sinlge'
 				 ELSE 'n/a'
-			END AS cst_material_status,  -- Normalize marital status data
+			END AS cst_marital_status,  -- Normalize marital status data
 			CASE WHEN UPPER(TRIM(cst_gndr)) = 'F' THEN 'Female'
 				 WHEN UPPER(TRIM(cst_gndr)) = 'M' THEN 'Male'
 				 ELSE 'n/a'
