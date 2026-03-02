@@ -8,14 +8,15 @@ Script Purpose:
 	-It performs the ETL (Extract, Transform, Load) process to add to the silver tables
 
 Usage:
-	EXEC silver.silver_load; 
+	EXEC silver.load_silver;  the tables, and transforming and cleaning the data.  
+	
 WARNING:
     Running this script will drop the content of all silver layer tables and fill them with the data from the bronze layer.
     There is no versioning or history of old data. Old data will be deleted finally.
 */
 
-
-
+USE [DataWarehouse]
+GO
 CREATE OR ALTER  PROCEDURE silver.load_silver AS
 BEGIN
 
@@ -83,7 +84,7 @@ BEGIN
 			cst_marital_status,
 			cst_gndr,
 			cst_create_date) 
-		
+
 		SELECT
 			cst_id,
 			cst_key,
@@ -207,7 +208,7 @@ BEGIN
 
 		SET @start_time = GETDATE();
 		PRINT '>> Truncateing Table: silver.erp_loc_a101';
-		TRUNCATE TABLE silver.erp_loc_a101;
+		TRUNCATE TABLE silver.erp_px_cat_g1v2;
 
 		PRINT '>>Inserting and Converting Data Into: silver.erp_loc_a101';
 		INSERT INTO silver.erp_px_cat_g1v2
