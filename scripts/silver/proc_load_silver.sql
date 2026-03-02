@@ -4,8 +4,11 @@ Truncates and Loads Tables from the bronze layer to the silver layer.
 It performs multiple transformation and cleaning steps on the data.
 =============================================================
 Script Purpose:
-    This script loads the tables from bronze layer into the silver layer, after truncating the tables, and transforming and cleaning the data.  
-	
+    -This script loads the tables from bronze layer into the silver layer, after truncating the tables, and transforming and cleaning the data.  
+	-It performs the ETL (Extract, Transform, Load) process to add to the silver tables
+
+Usage:
+	EXEC silver.silver_load; 
 WARNING:
     Running this script will drop the content of all silver layer tables and fill them with the data from the bronze layer.
     There is no versioning or history of old data. Old data will be deleted finally.
