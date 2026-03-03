@@ -103,7 +103,7 @@ BEGIN
 			SELECT
 				* ,
 				ROW_NUMBER() OVER (PARTITION BY cst_id ORDER BY cst_create_date DESC) as flag_last
-			FROM bronze.crm_cust_info
+			FROM bronze.crm_cust_info WHERE cst_key LIKE  'AW%'
 		)t 
 		WHERE flag_last = 1 -- Select only the most recent entry per customer in case of mutliple entries
 		SET @end_time = GETDATE()
