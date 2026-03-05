@@ -33,6 +33,6 @@ Data flows only in one direction, form the source to Bronze, Silver and then Gol
 
 ![sales_data_mart](/doc/sales_data_mart.png)
 
-## Data Cathaloug
+## Data Catalog
 
-The data cathaloug is found in the doc folder [here](/doc/data_catalog.md)
+The data catalog is found in the doc folder [here](/doc/data_catalog.md)
