@@ -27,7 +27,7 @@ Data flows only in one direction, form the source to Bronze, Silver and then Gol
 
 ## Data Integration
 
-
+The data from the different tables are integrated using special keys, which are the same in mutliple tables. These are used as pointer to connect information acros tables.
 
 ![Data_integration](/doc/data_integration.png)
 
