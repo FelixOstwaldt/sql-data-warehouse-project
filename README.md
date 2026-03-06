@@ -21,11 +21,13 @@ The Data Warehouse is build after the Bronze - Silver - Gold Architecture. Data 
 
 ## Data Flow
 
-Data flows only in one direction, form the source to Bronze, Silver and then Gold layer. 
+Data flows only in one direction, form the source to Bronze, Silver and then Gold layer. Data is transformed in the Silver layer, but the tables are not changed. In the Gold layer the data is aggregated to make it more end-user friendly.
 
 ![Data_Flow](/doc/data_flow.png)
 
 ## Data Integration
+
+
 
 ![Data_integration](/doc/data_integration.png)
 
