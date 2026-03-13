@@ -15,7 +15,7 @@ This is done after the tutorial video [SQL DATA Warehouse from Scratch | Full Ha
 
 ## Data Architecture
 
-The Data Warehouse is build after the Bronze - Silver - Gold Architecture. Data ist extracted directly into the Bronze layer as a full load without transformations. From there the tables are transformed in the Silver layer. At the end in the Gold layer the tables are cponverted into views with data integration, aggregation and business logic. 
+The Data Warehouse is build after the Bronze - Silver - Gold Architecture. Data ist extracted directly into the Bronze layer as a full load without transformations. The tables in the Bronze layer are transformed and stored in the Silver layer. At the end in the Gold layer the tables are converted into views with data integration, aggregation and business logic. 
 
 ![Data_integration](/doc/data_architecture.png)
 
@@ -32,6 +32,8 @@ The data from the different tables are integrated using special keys, which are 
 ![Data_integration](/doc/data_integration.png)
 
 ## Star Schema
+
+The views in the Gold layer are connected by the IDs.
 
 ![sales_data_mart](/doc/sales_data_mart.png)
 
